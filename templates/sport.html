@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sport</title>
+        
+        <style>
+            #ale
+            {
+                color: blue;
+                
+            }
+        </style>
+    </head>
+    <body>
+        {% for sport in sports %}
+        <h2>{{ sport["name"]}}</h2>
+        <form action="/list" method="post">
+            <input name="id" type="hidden" value="{{ sport['id']}}">
+            <input type="submit" value="Register">
+        </form>
+        {%endfor%}
+        <form action="/logout" method="get">
+            <input type="submit" value="Log_out" id="ale">
+        </form>
+        <form action="/list" >
+            <input type="submit" value="Registered Sports" id="ale">
+        </form>
+
+    </body>
+</html>

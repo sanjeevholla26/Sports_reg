@@ -4,6 +4,19 @@
         <title>Sports Registration</title>
     </head>
     <body>
-        Sports Registration
+        <h1>FRESHERS CUP 2022-23</h1>
+        For the Freshers cup we are opening the registration for the sports in which you are interested in
+        <h2>The Sports for which you can register for are</h2>
+        <ul>
+        {% for sport in sports %}
+        
+            <li>
+                {{sport["name"]}}
+            </li>
+        {% endfor %}
+        </ul>
+        <form action="/signin" method="get">
+            <input type="submit" value="Sign in">
+        </form>
     </body>
 </Html>

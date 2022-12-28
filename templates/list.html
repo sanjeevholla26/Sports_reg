@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LIST</title>
+    </head>
+    <body>
+        <h1>Hi {{session["name"]}}</h1>
+        You have successfully registered for the following sports
+        <ul>
+            {% for sport in sports %}
+            <li>{{sport["name"]}}</li>
+            {%endfor%}
+        </ul>
+        <form action="/reg">
+            <input type="submit" value="Register for one more sport">
+        </form>
+    </body>
+</html>
